@@ -1,0 +1,15 @@
+/*
+ * MagSwitch.h
+ *
+ *  Created on: Dec 1, 2016
+ *      Author: Rusty
+ */
+
+#ifndef TASKS_MAGSWITCH_H_
+#define TASKS_MAGSWITCH_H_
+
+//global value that holds the x axis value from the magnetometer
+extern uint32_t magnetometerValue = 1200;
+
+
+#endif /* TASKS_MAGSWITCH_H_ */

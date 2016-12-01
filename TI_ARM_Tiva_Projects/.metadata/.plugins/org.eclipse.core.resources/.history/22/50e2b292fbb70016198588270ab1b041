@@ -1,0 +1,24 @@
+
+
+extern void Task_Magnetometer(void *pvParameters) {
+
+	while(1){
+		switchLogic(magnetometerValue);
+	}
+}
+
+extern void switchLogic(uint32_t pVal){
+	uint32_t threshold = 600;
+
+	if(pVal < threshold && isOn == false)
+	{
+		isOn = true;
+		UARTprintf("Magnetic Switch ACTIVATED!\n");
+	}
+	else if(pVal > threshold && isOn == true)
+	{
+		isOn = false;
+		UARTprintf("Magnetic Switch DEACTIVATED!\n");
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Proj2_Magnetometer/Tasks/MagSwitch&apos; to &apos;MagSwitch.c&apos;" description="Rename resource &apos;MagSwitch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Tasks/MagSwitch" name="MagSwitch.c" stamp="1480619895168" updateReferences="true"/>
+</session>

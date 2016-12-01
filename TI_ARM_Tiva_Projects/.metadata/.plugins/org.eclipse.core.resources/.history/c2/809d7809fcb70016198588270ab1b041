@@ -1,0 +1,47 @@
+
+#include	"inc/hw_ints.h"
+#include	"inc/hw_memmap.h"
+#include	"inc/hw_types.h"
+#include	"inc/hw_uart.h"
+
+#include	<stddef.h>
+#include	<stdbool.h>
+#include	<stdint.h>
+#include	<stdarg.h>
+#include 	<stdio.h>
+
+#include	"driverlib/sysctl.h"
+#include	"driverlib/pin_map.h"
+#include	"driverlib/gpio.h"
+
+#include	"FreeRTOS.h"
+#include	"task.h"
+#include 	"driverlib/timer.h"
+#include	"Drivers/uartstdio.h"
+
+//globals for the magnetic switch
+extern bool isOn = false;
+
+extern void Task_MagSwitch(void *pvParameters) {
+
+	while(1){
+		switchLogic(magnetometerValue);
+		UARTprintf("in mag switch task!\n");
+	}
+}
+
+extern void switchLogic(uint32_t pVal){
+	uint32_t threshold = 600;
+
+	if(pVal < threshold && isOn == false)
+	{
+		isOn = true;
+		UARTprintf("Magnetic Switch ACTIVATED!\n");
+	}
+	else if(pVal > threshold && isOn == true)
+	{
+		isOn = false;
+		UARTprintf("Magnetic Switch DEACTIVATED!\n");
+	}
+
+}

@@ -1,0 +1,13 @@
+/**
+ *
+ * @author Alexander Kimani, Rusty Riedel
+ * @email a906k620@ku.edu
+ * @file Magnetometer.h
+ * @date 09/12/2016
+ *
+ */
+
+//function prototypes
+extern void MagnetometerInit()
+extern void MPU9150Callback(void *pvCallbackData, uint_fast8_t ui8Status);
+extern void Task_Magnetometer(void *pvParameters);

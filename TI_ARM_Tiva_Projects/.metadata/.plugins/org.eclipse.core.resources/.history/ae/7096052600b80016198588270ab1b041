@@ -1,0 +1,20 @@
+/*
+ * MagSwitch.h
+ *
+ *  Created on: Dec 1, 2016
+ *  @author Rusty Riedel, Stephen Wiss
+ */
+
+#ifndef TASKS_MAGSWITCH_H_
+#define TASKS_MAGSWITCH_H_
+
+//global value that holds the x axis value from the magnetometer
+extern uint32_t magnetometerValue;
+extern uint32_t	LED_Data;
+extern uint32_t THRESHOLD;
+
+//function prototypes
+extern void Task_MagSwitch(void *pvParameters);
+void switchLogic(uint32_t pVal);
+
+#endif /* TASKS_MAGSWITCH_H_ */
